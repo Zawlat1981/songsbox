@@ -32,7 +32,7 @@ html_code = """
             background: #eee;
             border-radius: 5px;
             cursor: pointer;
-            transition: 0.2s;
+            transition: 0.2s; 
             color: #333;
         }
         li:hover {
