@@ -67,7 +67,7 @@ html_code = """
                 src: "https://github.com/Zawlat1981/my-audio/raw/refs/heads/main/%E1%80%95%E1%80%BC%E1%80%90%E1%80%BA%E1%80%90%E1%80%AF%E1%80%94%E1%80%BA%E1%80%B8%E1%80%9C%E1%80%95%E1%80%BA%E1%80%90%E1%80%AF%E1%80%94%E1%80%BA%E1%80%B8%2023.mp3"
             },
             {
-                title:"ပြတ်တုန်းလပ်တုန်း.mp3",
+                title:"တော်ရာ.mp3",
                 src: "https://github.com/Zawlat1981/my-audio/raw/refs/heads/main/%E1%80%90%E1%80%B1%E1%80%AC%E1%80%BA%E1%80%9B%E1%80%AC.mp3"
             }
         ];
