@@ -1,9 +1,7 @@
 import streamlit as st
 
-# Streamlit App ရဲ့ ခေါင်းစဉ်
 st.title("My Song Playlist App")
 
-# HTML ကုဒ်များကို ဒီထဲမှာ တိုက်ရိုက်ထည့်ပါ
 html_code = """
 <!DOCTYPE html>
 <html lang="my">
@@ -35,6 +33,7 @@ html_code = """
             border-radius: 5px;
             cursor: pointer;
             transition: 0.2s;
+            color: #333;
         }
         li:hover {
             background: #ddd;
@@ -48,7 +47,7 @@ html_code = """
 <body>
 
     <div class="player-box">
-        <h3>သီချင်းစာရင်း (Playlist)</h3>
+        <h3 style="color: #333;">သီချင်းစာရင်း (Playlist)</h3>
         <audio id="audioPlayer" controls></audio>
         <ul id="playlist"></ul>
     </div>
@@ -77,7 +76,9 @@ html_code = """
 
         function playSong(index) {
             audioPlayer.src = songs[index].src;
-            audioPlayer.play();
+            audioPlayer.play().catch(error => {
+                console.log("Auto-play prevented or loading:", error);
+            });
             document.querySelectorAll('#playlist li').forEach((li, idx) => {
                 if (idx === index) {
                     li.classList.add('active');
@@ -90,7 +91,7 @@ html_code = """
         loadPlaylist();
         if(songs.length > 0) {
             audioPlayer.src = songs[0].src;
-            playlistElement.children[0].classList.add('active');
+            document.querySelectorAll('#playlist li')[0].classList.add('active');
         }
     </script>
 
@@ -98,5 +99,4 @@ html_code = """
 </html>
 """
 
-# Streamlit မှာ HTML ကို ပြသရန်
 st.components.v1.html(html_code, height=400)
