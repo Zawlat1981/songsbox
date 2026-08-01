@@ -76,9 +76,11 @@ html_code = """
 
         function playSong(index) {
             audioPlayer.src = songs[index].src;
+            audioPlayer.load();
             audioPlayer.play().catch(error => {
-                console.log("Auto-play prevented or loading:", error);
+                console.log("Play blocked:", error);
             });
+            
             document.querySelectorAll('#playlist li').forEach((li, idx) => {
                 if (idx === index) {
                     li.classList.add('active');
@@ -89,6 +91,8 @@ html_code = """
         }
 
         loadPlaylist();
+        
+        // ပထမစဝင်လာချင်း ပထမသီချင်းကို Source ထည့်ပေးထားမည် (Autoplay မလုပ်ပါ)
         if(songs.length > 0) {
             audioPlayer.src = songs[0].src;
             document.querySelectorAll('#playlist li')[0].classList.add('active');
