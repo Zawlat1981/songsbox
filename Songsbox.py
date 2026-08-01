@@ -56,7 +56,7 @@ html_code = """
         const songs = [
             {
                 title: "အပြုံးကိုအပြီးဌားခဲ့.mp3",
-                src: "https://github.com/Zawlat1981/my-audio/raw/refs/heads/main/%E1%80%A1%E1%80%95%E1%80%BC%E1%80%AF%E1%80%B6%E1%80%80%E1%80%AD%E1%80%AF%E1%80%A1%E1%80%95%E1%80%BC%E1%80%AE%E1%80%B8%E1%80%8C%E1%80%AC%E1%80%B8%E1%80%81%E1%80%B2%E1%80%B7.mp3"
+                src: "https://github.com/Zawlat1981/my-audio/raw/refs/heads/main/%E1%80%A1%E1%80%95%E1%80%BC%E1%80%AF%E1%80%B6%E1%80%B8%E1%80%80%E1%80%AD%E1%80%AF%E1%80%A1%E1%80%95%E1%80%BC%E1%80%AE%E1%80%B8%E1%80%8C%E1%80%AC%E1%80%B8%E1%80%81%E1%80%B2%E1%80%B7.mp3"
             }
         ];
 
