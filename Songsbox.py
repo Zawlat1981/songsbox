@@ -12,7 +12,7 @@ html_code = """
             background: white;
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
             width: 320px;
             text-align: center;
         }
