@@ -81,17 +81,17 @@ html_code = """
 
     <script>
         const songs = [
-             {
+            {
                 title: "စိန်ပန်းပြာ.mp3",
-                src: "https://github.com/Zawlat1981/my-audio/blob/main/%E1%80%85%E1%80%AD%E1%80%94%E1%80%BA%E1%80%95%E1%80%94%E1%80%BA%E1%80%B8%E1%80%95%E1%80%BC%E1%80%AC%20-%20%E1%80%A1%E1%80%B1%E1%80%AC%E1%80%84%E1%80%BA%E1%80%99%E1%80%BC%E1%80%84%E1%80%BA%E1%80%B7%E1%80%99%E1%80%BC%E1%80%90%E1%80%BA%E1%81%8A%20%E1%80%99%E1%80%B1%E1%80%86%E1%80%BD%E1%80%AD.mp3"
+                src: "https://github.com/Zawlat1981/my-audio/raw/refs/heads/main/%E1%80%85%E1%80%AD%E1%80%94%E1%80%BA%E1%80%95%E1%80%94%E1%80%BA%E1%80%B8%E1%80%95%E1%80%BC%E1%80%AC%20-%20%E1%80%A1%E1%80%B1%E1%80%AC%E1%80%84%E1%80%BA%E1%80%99%E1%80%BC%E1%80%84%E1%80%BA%E1%80%B7%E1%80%99%E1%80%BC%E1%80%90%E1%80%BA%E1%81%8A%20%E1%80%99%E1%80%B1%E1%80%86%E1%80%BD%E1%80%AD.mp3"
             },
             {
                 title: "စကားလုံးတွေမလိုဘူး.mp3",
-                src: "https://github.com/Zawlat1981/my-audio/blob/main/%E1%80%85%E1%80%80%E1%80%AC%E1%80%B8%E1%80%9C%E1%80%AF%E1%80%B6%E1%80%B8%E1%80%90%E1%80%BD%E1%80%B1%E1%80%99%E1%80%9C%E1%80%AD%E1%80%AF%E1%80%98%E1%80%B0%E1%80%B8.mp3"
+                src: "https://github.com/Zawlat1981/my-audio/raw/refs/heads/main/%E1%80%85%E1%80%80%E1%80%AC%E1%80%B8%E1%80%9C%E1%80%AF%E1%80%B6%E1%80%B8%E1%80%90%E1%80%BD%E1%80%B1%E1%80%99%E1%80%9C%E1%80%AD%E1%80%AF%E1%80%98%E1%80%B0%E1%80%B8.mp3"
             },
             {
                 title: "အပြုံးကိုအပြီးဌားခဲ့.mp3",
-                src: "https://github.com/Zawlat1981/my-audio/raw/refs/heads/main/%E1%80%A1%E1%80%95%E1%80%BC%E1%80%AF%E1%80%B6%E1%80%B8%E1%80%80%E1%80%AD%E1%80%AF%E1%80%A1%E1%80%95%E1%80%BC%E1%80%AE%E1%80%B8%E1%80%8C%E1%80%AC%E1%80%B8%E1%80%81%E1%80%B2%E1%80%B7.mp3"
+                src: "https://github.com/Zawlat1981/my-audio/raw/refs/heads/main/%E1%80%A1%E1%80%95%E1%80%BC%E1%80%AF%E1%80%B6%E1%80%80%E1%80%AD%E1%80%A1%E1%80%95%E1%80%BC%E1%80%ae%E1%80%B8%E1%80%8C%E1%80%AC%E1%80%B8%E1%80%81%E1%80%B2%E1%80%B7.mp3"
             },
             {
                 title: "ဆေးလိပ်နဲ့မီးခြစ်.mp3",
@@ -143,16 +143,13 @@ html_code = """
             });
         }
 
-        // သီချင်းတစ်ပုဒ် ပြီးဆုံးသွားသည့်အခါ လုပ်ဆောင်မည့် အပိုင်း (Auto Next)
         audioPlayer.addEventListener('ended', () => {
             const mode = playModeSelect.value;
 
             if (mode === 'repeatOne') {
-                // ဒီတစ်ပုဒ်တည်းကို ပြန်ဖွင့်မည်
                 audioPlayer.currentTime = 0;
                 audioPlayer.play();
             } else if (mode === 'shuffle') {
-                // ဟိုတစ်ပုဒ် ဒီတစ်ပုဒ် ကျပန်းရွေးမည် (လက်ရှိသီချင်းနဲ့ မတူတာကို ရွေးရန်)
                 let nextIdx;
                 if (songs.length > 1) {
                     do {
@@ -163,7 +160,6 @@ html_code = """
                 }
                 playSong(nextIdx);
             } else {
-                // အစဉ်လိုက် (နောက်တစ်ပုဒ်ကို ကူးမည်၊ ပြီးသွားရင် ပထမဆုံးကို ပြန်စမည်)
                 currentIndex = (currentIndex + 1) % songs.length;
                 playSong(currentIndex);
             }
@@ -171,7 +167,6 @@ html_code = """
 
         loadPlaylist();
         
-        // ပထမစဝင်လာချင်း ပထမသီချင်းကို Source ထည့်ပေးထားမည် (Autoplay မလုပ်ပါ)
         if(songs.length > 0) {
             audioPlayer.src = songs[0].src;
             document.querySelectorAll('#playlist li')[0].classList.add('active');
