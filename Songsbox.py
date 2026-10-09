@@ -18,7 +18,7 @@ html_code = """
         }
         audio {
             width: 100%;
-            margin-bottom: 10px;
+            margin-bottom: 10px; 
         }
         .controls-panel {
             margin-bottom: 15px;
