@@ -56,7 +56,7 @@ html_code = """
             background: #ddd;
         }
         li.active {
-            background: #4CAF50;
+            background: #4CAF50; 
             color: white;
         }
     </style>
