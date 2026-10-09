@@ -82,6 +82,10 @@ html_code = """
     <script>
         const songs = [
             {
+                title: "သံယောဇဥ်သံသရာ.mp3",
+                src: "https://github.com/Zawlat1981/my-audio/raw/refs/heads/main/%E1%80%9E%E1%80%B6%E1%80%9A%E1%80%B1%E1%80%AC%E1%80%87%E1%80%A5%E1%80%BA%E1%80%9E%E1%80%B6%E1%80%9E%E1%80%9B%E1%80%AC.mp3"
+            },
+            {
                 title: "စိန်ပန်းပြာ.mp3",
                 src: "https://github.com/Zawlat1981/my-audio/raw/refs/heads/main/%E1%80%85%E1%80%AD%E1%80%94%E1%80%BA%E1%80%95%E1%80%94%E1%80%BA%E1%80%B8%E1%80%95%E1%80%BC%E1%80%AC%20-%20%E1%80%A1%E1%80%B1%E1%80%AC%E1%80%84%E1%80%BA%E1%80%99%E1%80%BC%E1%80%84%E1%80%BA%E1%80%B7%E1%80%99%E1%80%BC%E1%80%90%E1%80%BA%E1%81%8A%20%E1%80%99%E1%80%B1%E1%80%86%E1%80%BD%E1%80%AD.mp3"
             },
